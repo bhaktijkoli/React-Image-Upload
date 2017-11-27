@@ -30,18 +30,21 @@ class UploadImage extends Component {
   }
   render() {
     return (
-      <div id={this.props.name} className="input-group image-upload">
-        <input type="text" className="form-control image-upload-filename" readOnly/>
-        <span className="input-group-btn">
-          <button type="button" className="btn btn-danger image-upload-clear">
-            <i className="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Clear
-          </button>
-          <div className="btn btn-primary image-upload-input">
-            <i className="fa fa-folder-open" aria-hidden="true"></i>&nbsp;
-            <span className="image-upload-input-title">Browse</span>
-            <input id={this.props.name} name={this.props.name} type="file" accept="image/*"/>
-          </div>
-        </span>
+      <div className="form-group">
+        <div id={this.props.name} className="input-group image-upload">
+          <input type="text" className="form-control image-upload-filename" readOnly/>
+          <span className="input-group-btn">
+            <button type="button" className="btn btn-danger image-upload-clear">
+              <i className="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Clear
+            </button>
+            <div className="btn btn-primary image-upload-input">
+              <i className="fa fa-folder-open" aria-hidden="true"></i>&nbsp;
+              <span className="image-upload-input-title">Browse</span>
+              <input id={this.props.name} name={this.props.name} type="file" accept="image/*"/>
+            </div>
+          </span>
+        </div>
+        <p className="help-block">{this.props.help}</p>
       </div>
     );
   }
