@@ -12,4 +12,5 @@
 <UploadImage name="image1"/>
 ```
 #### Props
-* name - Name and id given to the file input
+* name - Name and id given to the file input.
+* help - Display help text below file input box.
